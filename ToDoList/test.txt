@@ -1,0 +1,13 @@
+while (loopIn) {
+    System.out.println("Ada lagi?\n(y/n)");
+    pilih = in.next();
+    if (pilih.equals("y")) {
+        loopIn = true;
+    }
+    else if(pilih.equals("n")){
+        loopIn = false;
+    }
+    else{
+        System.out.println("Pilihan tidak tepat");
+    }
+}
