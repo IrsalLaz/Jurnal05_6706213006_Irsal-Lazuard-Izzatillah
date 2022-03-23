@@ -1,39 +1,38 @@
 import java.util.*;
 
 public class QueueTodo<E> {
-    private Queue<E> queueList; 
+    private Queue<E> toDoList; 
  
-    //constructor 
     public QueueTodo() { 
-        queueList = new LinkedList<E>(); 
+        toDoList = new LinkedList<E>(); 
     } 
  
     // menambah objek pada antrian(queue)
-    public void enqueue(E object) { 
-        queueList.add(object); 
+    public void addTodo(E object) { 
+        toDoList.add(object); 
     } 
  
     // menghapus objek pada antrian(queue)
-    public E dequeue() throws NoSuchElementException {
-        return queueList.remove();
+    public E delTodo() throws NoSuchElementException {
+        return toDoList.remove();
     } 
  
     // memastikan jika queue is empty 
     public boolean isEmpty() { 
-        return queueList.isEmpty(); 
+        return toDoList.isEmpty(); 
     } 
  
     /*mencetak queue menggunakan Iterator(agar tidak bisa melakukan
     perubahan pada isi queue), menggunakan hasNext karena sesuai dengan
     konsep queue yaitu FIFO atau bisa disebut (maju)
     */
-    public void printQueue() {
+    public void printTodo() {
         if (isEmpty()) {
             System.out.println("\nbelum ada kegiatan nih!");
             return;
         }
 
-        Iterator<E> iterator = queueList.iterator(); 
+        Iterator<E> iterator = toDoList.iterator(); 
         while (iterator.hasNext()) { 
             Object value = iterator.next(); 
             System.out.print("\n" + value); 
